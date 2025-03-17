@@ -1,4 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="/schedule_display.css">
+
+    <title>Schedule Manager</title>
+
+  </head>
+  <body>
+    <div class = "parent_container" id = "parent_container">
+
+      <div class = "navitgationPanel" id = "navigationPanel">
+        <button class = "navigationLeftButtonStyle navigationPanelText" id = "individualSchButton">INDIVIDUAL</button>
+  
+        <button class = "navigationMiddleButtonStyle navigationPanelText" id = "generalSchButton">GENERAL</button>
+        <button class = "navigationMiddleButtonStyle navigationPanelText" id = "templatesButton">TEMPLATES</button>
+        <button class = "navigationMiddleButtonStyle navigationPanelText">EMPTY</button>
+  
+        <button class = "navigationRightButtonStyle navigationPanelText">EMPTY</button>
+      </div>
+
+      <select id = "teacherSelector" class = "teacherSelectorClass selectorClassText">
+      </select>
+      <input type = "month" id = "monthSelector" class = "monthSelectorClass selectorClassText">
+
+    </div>
+
+    <div class = "child_container" id = "child_container">
+    </div>  
+  
+
+    <div class = "controlPanelMain" id = "controlPanelMain"> 
+      <div class="controlPanelParentGrid">
+        <button class="controlPanelButtonLeft" id="controlPanelEditButton">EDIT</button>
+        <button class="controlPanelButtonMiddle" id="controlPanelTemplateButton">TEMPLATE</button>
+        <button class="controlPanelButtonRight" id="controlPanelFilterButton">FILTER</button>
+
+        <div class="controlPanelOpenedPage" id = "controlPanelOpenedPage">
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class = "controlPanelMoveButton" id = "controlPanelMoveButton">►</div>
+
+    <script>
+
+
+      //Current bugs:
+        //If you choose the input date for general schedules 2 times, it shifts the position of the input field. dunno why.
+
+
+      function redirect(url){
+        window.location.href = url;        
+      }
+    </script>
+    <script type="module">
       import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js';
 
       const firebaseConfig = {
@@ -2237,4 +2300,7 @@
         }
 
       }
+
+    </script>
+  </body>
 </html>
