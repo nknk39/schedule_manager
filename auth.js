@@ -2,6 +2,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.13.2/fireba
 import { getFirestore, collection, getDoc, doc, updateDoc} from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js';
 import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged  } from 'https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js';
 
+//For people reviewing this. IT IS MEANT TO BE EXPOSED. The usage is restricted to a specific domain.
 const firebaseConfig = {
     apiKey: "AIzaSyC_sefxEBuN0jbzGj17ZWmcgI_4gAcrmfA",
     authDomain: "schedule-management-85d32.firebaseapp.com",
